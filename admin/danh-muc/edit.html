@@ -1,0 +1,38 @@
+<main class="app-content">
+    <div class="app-title">
+      <ul class="app-breadcrumb breadcrumb side">
+        <li class="breadcrumb-item active"><a href="#"><b>Quản lý danh mục</b></a></li>
+        <li class="breadcrumb-item active"><a href="#"><b>Chỉnh sửa danh mục</b></a></li>
+      </ul>
+      <div id="clock"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tile">
+          <div class="tile-body">
+            <div class="row element-button">
+
+            </div>
+            <form ng-submit="edit()">
+                <div class="mb-3">
+                    <label for="productName" class="form-label">Id</label>
+                    <input type="text" class="form-control" id="productName" name="productName" value="{{danhMuc.id}}" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="productName" class="form-label">Tên danh mục</label>
+                    <input type="text" class="form-control" id="productName" name="productName" ng-model="danhMuc.ten">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Lưu</button>
+                <a href="#!danh-muc" class="btn btn-danger">Hủy bỏ</a>
+            </form>
+            <div class="alert alert-danger alert-dismissible mt-3" ng-show="!formHopLe">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Chỉnh sửa không thành công!</strong>
+                <br> {{formThongBao}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>

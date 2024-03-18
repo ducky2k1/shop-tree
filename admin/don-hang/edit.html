@@ -1,0 +1,54 @@
+<main class="app-content">
+    <div class="app-title">
+      <ul class="app-breadcrumb breadcrumb side">
+        <li class="breadcrumb-item active"><a href="#"><b>Quản lý đơn hàng</b></a></li>
+        <li class="breadcrumb-item active"><a href="#"><b>Chỉnh sửa đơn hàng</b></a></li>
+      </ul>
+      <div id="clock"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tile">
+          <div class="tile-body">
+            <div class="row element-button">
+
+            </div>
+            <form ng-submit="edit()">
+                <div class="mb-3">
+                    <label for="productName" class="form-label">Id</label>
+                    <input type="text" class="form-control" id="productName" name="productName" value="{{danhSach.id}}" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">Họ</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" ng-model="danhSach.fisrtName">
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Tên</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" ng-model="danhSach.lastName">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" ng-model="danhSach.email">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Số điện thoại</label>
+                    <input type="text" class="form-control" id="phone" name="phone" ng-model="danhSach.phone">
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Địa chỉ</label>
+                    <input type="text" class="form-control" id="address" name="address" ng-model="danhSach.address">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Lưu</button>
+                <a href="#!donHang" class="btn btn-danger">Hủy bỏ</a>
+            </form>
+            <div class="alert alert-danger alert-dismissible mt-3" ng-show="!formHopLe">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Chỉnh sửa không thành công!</strong>
+                <br> {{formThongBao}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>

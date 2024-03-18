@@ -1,0 +1,48 @@
+<main class="app-content">
+    <div class="app-title">
+      <ul class="app-breadcrumb breadcrumb side">
+        <li class="breadcrumb-item active"><a href="#"><b>Quản lý danh mục</b></a></li>
+      </ul>
+      <div id="clock"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tile">
+          <div class="tile-body">
+            <div class="row element-button">
+              <div class="col-sm-2">
+
+                <a class="btn btn-add btn-sm" href="#!danh-muc/tao-moi" title="Thêm"><i class="fas fa-plus"></i>
+                  Tạo mới</a>
+              </div>
+
+            </div>
+            <table class="table table-hover table-bordered" id="sampleTable">
+              <thead>
+                <tr>
+                  <th width="10"><input type="checkbox" id="all"></th>
+                  <th>ID</th>
+                  <th>Tên danh mục</th>
+                  <th>Chức năng</th>
+                </tr>
+              </thead>
+              <tbody ng-repeat="dm in danhMuc">
+                <tr>
+                  <td width="10"><input type="checkbox" name="check1" value="1"></td>
+                  <td>{{dm.id}}</td>
+                  <td>{{dm.ten}}</td>
+                  <td><button class="btn btn-danger btn-sm " type="button" title="Xóa" ng-click="delete(dm.id)"><i
+                        class="fas fa-trash-alt"></i></button>
+                        <a href="#!danh-muc/edit/{{dm.id}}" class="btn btn-warning btn-sm "><i class="fa fa-edit" style="color: white;"></i></a>
+                        
+                  </td>
+                </tr>
+
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>

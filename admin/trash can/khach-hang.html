@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quản trị Admin</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="https://kit.fontawesome.com/e522de5ba4.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body onload="time()" class="app sidebar-mini rtl">
+    <!-- Navbar-->
+    <header class="app-header">
+        <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar"
+            aria-label="Hide Sidebar"></a>
+        <!-- Navbar Right Menu-->
+        <ul class="app-nav">
+
+
+            <!-- User Menu-->
+            <li><a class="app-nav__item" href="/index.html"><i class="fa-solid fa-right-from-bracket"></i> </a>
+
+            </li>
+        </ul>
+    </header>
+    <!-- Sidebar menu-->
+    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+    <aside class="app-sidebar">
+        <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="" width="50px" alt="User Image">
+            <div>
+                <p class="app-sidebar__user-name"><b>Trịnh Việt Đức</b></p>
+                <p class="app-sidebar__user-designation">Chào mừng bạn trở lại</p>
+            </div>
+        </div>
+        <hr>
+        <ul class="app-menu">
+            <li><a class="app-menu__item haha" href="index.html"><i
+                        class='app-menu__icon fa-solid fa-gauge-simple-high'></i><span class="app-menu__label">Bảng điều
+                        khiển</span></a></li>
+            <li><a class="app-menu__item " href="./danh-muc.html"><i class='app-menu__icon fa-solid fa-tags'></i>
+                    <span class="app-menu__label">Quản lý danh mục</span></a></li>
+            <li><a class="app-menu__item " href="./nhan-vien.html"><i class='app-menu__icon fa-solid fa-id-card'></i>
+                    <span class="app-menu__label">Quản lý nhân viên</span></a></li>
+            <li><a class="app-menu__item" href="./khach-hang.html"><i
+                        class='app-menu__icon fa-solid fa-user-pen'></i><span class="app-menu__label">Quản lý khách
+                        hàng</span></a></li>
+            <li><a class="app-menu__item" href="./san-pham.html"><i
+                        class='app-menu__icon fa-solid fa-cart-shopping'></i><span class="app-menu__label">Quản lý sản
+                        phẩm</span></a>
+            </li>
+            <li><a class="app-menu__item" href="./don-hang.html"><i
+                        class='app-menu__icon fa-solid fa-list-check'></i><span class="app-menu__label">Quản lý đơn
+                        hàng</span></a></li>
+            <li><a class="app-menu__item" href="./noi-bo.html"><i
+                        class='app-menu__icon fa-solid fa-person-running'></i><span class="app-menu__label">Quản lý nội
+                        bộ
+                    </span></a></li>
+            <li><a class="app-menu__item" href="./money.html"><i
+                        class='app-menu__icon fa-solid fa-sack-dollar'></i><span class="app-menu__label">Bảng kê
+                        lương</span></a></li>
+            <li><a class="app-menu__item" href="./doanh-thu.html"><i
+                        class='app-menu__icon fa-solid fa-calendar'></i><span class="app-menu__label">Báo cáo doanh
+                        thu</span></a>
+            </li>
+        </ul>
+    </aside>
+    <main class="app-content">
+        <div class="app-title">
+            <ul class="app-breadcrumb breadcrumb side">
+                <li class="breadcrumb-item active"><a href="#"><b>Quản lý khách hàng</b></a></li>
+            </ul>
+            <div id="clock"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tile">
+                    <div class="tile-body">
+                        <div class="row element-button">
+                            <div class="col-sm-2">
+
+                                <a class="btn btn-add btn-sm" href="form-add-bi-cam.html" title="Thêm"><i
+                                        class="fas fa-plus"></i>
+                                    Tạo mới</a>
+                            </div>
+
+                        </div>
+                        <table class="table table-hover table-bordered js-copytextarea" cellpadding="0" cellspacing="0"
+                            border="0" id="sampleTable">
+                            <thead>
+                                <tr>
+                                    <th width="10"><input type="checkbox" id="all"></th>
+                                    <th>ID nhân viên</th>
+                                    <th width="150">Họ và tên</th>
+                                    <th width="20">Ảnh thẻ</th>
+                                    <th width="300">Địa chỉ</th>
+                                    <th>Ngày sinh</th>
+                                    <th>Giới tính</th>
+                                    <th>SĐT</th>
+                                    <th width="100">Tính năng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td width="10"><input type="checkbox" name="check1" value="1"></td>
+                                    <td>#CD12837</td>
+                                    <td>Hồ Thị Thanh Ngân</td>
+                                    <td><img class="img-card-person" src="" alt=""></td>
+                                    <td>155-157 Trần Quốc Hoàn, Quận Cầu Giấy, TP. Hà Nội </td>
+                                    <td>12/02/1999</td>
+                                    <td>Nữ</td>
+                                    <td>0926737168</td>
+                                    <td class="table-td-center"><button class="btn btn-danger btn-sm trash"
+                                            type="button" title="Xóa"
+                                            onclick="return confirm('Bạn có chắc xóa không')"><i
+                                                class="fas fa-trash-alt"></i>
+                                        </button>
+                                        <button class="btn btn-warning btn-sm edit" type="button" title="Sửa"
+                                            id="show-emp" data-toggle="modal" data-target="#ModalUP"><i
+                                                class="fas fa-edit" style="color: white;"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="10"><input type="checkbox" name="check2" value="2"></td>
+                                    <td>#SX22837</td>
+                                    <td>Trần Khả Ái</td>
+                                    <td><img class="img-card-person" src="" alt=""></td>
+                                    <td>Thành phố Hà Nội</td>
+                                    <td>22/12/1999</td>
+                                    <td>Nữ</td>
+                                    <td>0931342432</td>
+                                    <td class="table-td-center"><button class="btn btn-danger btn-sm trash"
+                                            type="button" title="Xóa"
+                                            onclick="return confirm('Bạn có chắc xóa không')"><i
+                                                class="fas fa-trash-alt"></i>
+                                        </button>
+                                        <button class="btn btn-warning btn-sm edit" type="button" title="Sửa"
+                                            id="show-emp" data-toggle="modal" data-target="#ModalUP"><i
+                                                class="fas fa-edit" style="color: white;"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="10"><input type="checkbox" name="check3" value="3"></td>
+                                    <td>#LO2871</td>
+                                    <td>Phạm Thu Cúc</td>
+                                    <td><img class="img-card-person" src="" alt=""></td>
+                                    <td>Thành phố Hà Nội </td>
+                                    <td>02/06/1998</td>
+                                    <td>Nữ</td>
+                                    <td>0931491997</td>
+                                    <td class="table-td-center"><button class="btn btn-danger btn-sm trash"
+                                            type="button" title="Xóa"
+                                            onclick="return confirm('Bạn có chắc xóa không')"><i
+                                                class="fas fa-trash-alt"></i>
+                                        </button>
+                                        <button class="btn btn-warning btn-sm edit" type="button" title="Sửa"
+                                            id="show-emp" data-toggle="modal" data-target="#ModalUP"><i
+                                                class="fas fa-edit" style="color: white;"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--
+  MODAL
+-->
+    <div class="modal fade" id="ModalUP" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static"
+        data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="form-group  col-md-12">
+                            <span class="thong-tin-thanh-toan">
+                                <h5>Chỉnh sửa thông tin khách hàng cơ bản</h5>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label class="control-label">ID nhân viên</label>
+                            <input class="form-control" type="text" required value="#CD2187" disabled>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label">Họ và tên</label>
+                            <input class="form-control" type="text" required value="Trịnh Việt Đức">
+                        </div>
+                        <div class="form-group  col-md-6">
+                            <label class="control-label">Số điện thoại</label>
+                            <input class="form-control" type="number" required value="09267312388">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label">Địa chỉ email</label>
+                            <input class="form-control" type="text" required value="ductvph2988@fpt.edu.vn">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label">Ngày sinh</label>
+                            <input class="form-control" type="date" value="06/09/2001">
+                        </div>
+                    </div>
+                    <BR>
+                    <a href="#" style="float: right;
+      font-weight: 600;
+      color: #ea0000;" class="text-decoration-none">Chỉnh sửa nâng cao</a>
+                    <BR>
+                    <BR>
+                    <button class="btn btn-success" type="button">Lưu lại</button>
+                    <a class="btn btn-danger" data-dismiss="modal" href="#">Hủy bỏ</a>
+                    <BR>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+MODAL
+-->
+    <script src="../js/bootstrap.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/popper.min.js"></script>
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/plugins/pace.min.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="js/plugins/chart.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="js/plugins/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/plugins/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript">$('#sampleTable').DataTable();</script>
+    <script type="text/javascript">
+        oTable = $('#sampleTable').dataTable();
+        $('#all').click(function (e) {
+            $('#sampleTable tbody :checkbox').prop('checked', $(this).is(':checked'));
+            e.stopImmediatePropagation();
+        });
+        //Thời Gian
+        function time() {
+            var today = new Date();
+            var weekday = new Array(7);
+            weekday[0] = "Chủ Nhật";
+            weekday[1] = "Thứ Hai";
+            weekday[2] = "Thứ Ba";
+            weekday[3] = "Thứ Tư";
+            weekday[4] = "Thứ Năm";
+            weekday[5] = "Thứ Sáu";
+            weekday[6] = "Thứ Bảy";
+            var day = weekday[today.getDay()];
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1;
+            var yyyy = today.getFullYear();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            nowTime = h + " giờ " + m + " phút " + s + " giây";
+            if (dd < 10) {
+                dd = '0' + dd
+            }
+            if (mm < 10) {
+                mm = '0' + mm
+            }
+            today = day + ', ' + dd + '/' + mm + '/' + yyyy;
+            tmp = '<span class="date"> ' + today + ' - ' + nowTime +
+                '</span>';
+            document.getElementById("clock").innerHTML = tmp;
+            clocktime = setTimeout("time()", "1000", "Javascript");
+
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i;
+                }
+                return i;
+            }
+        }
+        //Modal
+        $("#show-emp").on("click", function () {
+            $("#ModalUP").modal({ backdrop: false, keyboard: false })
+        });
+    </script>
+</body>
+
+</html>

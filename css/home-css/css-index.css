@@ -1,0 +1,428 @@
+.nav-top{
+    height: 35px;
+    background-color: #5d8834;
+}
+li{
+    list-style: none;
+    margin: 0 15px 0 15px;
+}
+.menu li a{
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: larger;
+}
+.menu li:hover a{
+    color: #5d8834;
+}
+.qty{
+    position: absolute; 
+    margin: -7px 0 0 -8px; 
+}
+input{
+    border-radius: 10px 0 0 10px ;
+    padding: 5px 5px 5px 5px;
+    border: 2px solid #5d8834;
+
+}
+.search{
+    border: 2px solid #5d8834;
+    border-left: none;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 10px 10px 0 ;
+    background-color: #5d8834;
+}
+.cart a{
+    color: #5d8834;
+}
+.logins a{
+    background-color: #5d8834;
+    font-weight: bolder;
+}
+.menu, .option{
+    margin-top: 15px;
+}
+
+.drop-menu{
+    display: none;
+    position: absolute;
+    margin: 0px 0px 0px -65px;
+
+}
+.dropdown-menus:hover > .drop-menu{
+    display: block;
+    color: aliceblue;
+}
+.drop-menu li{
+    background-color: #5d8834;
+    border: 1px solid #009688;
+    width: auto;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+.drop-menu li a{
+    color: white;
+}
+.drop-menu li:hover a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #009688;
+    color: white;
+    transition: 0.3s;
+}
+
+/* section */
+
+/* -----hero-card--------- */
+.hero-card{
+    position: absolute;
+    top: 280px;
+    text-align: left;
+    height: 100%;
+    max-width: 623px;
+}
+.heading-1{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Playfair Display";
+    line-height: 40px;
+    color: #5d8834;
+}
+.heading-2{
+    font-size: 70px;
+    line-height: 93px;
+    font-weight: 700;
+    font-family: "Playfair Display";
+}
+/* hero-button */
+.hero-button{
+    display: flex;
+}
+.hero-button a{
+    text-decoration: none;
+}
+.button-1{
+    color: white;
+    border: none;
+    font-size: 18px;
+    min-width: 170px;
+    font-weight: 600;
+    line-height: 22px;
+    padding: 19px 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: transparent;
+    background-color: #5d8834;
+    border: 1px solid #5d8834;
+    z-index: 11;
+    transition: 0.3s;
+}
+.button-1:hover{
+    color: #5d8834;
+    background-color:  white;
+}
+.button-2{
+    font-size: 18px;
+    margin-left: 20px;
+    border: 1px solid #5d8834;
+    padding: 19px 38px;
+    background-color: transparent;
+    color: #5d8834;
+    font-weight: 600;
+    line-height: 22px;
+    min-width: 170px;
+    z-index: 11;
+    position: relative;
+    transition: 0.3s;
+}
+.button-2:hover{
+    color: white;
+    background-color:   #5d8834;
+}
+
+/* 
+section selling */
+#selling{
+    position: relative;
+}
+#selling .selling-card-text-1{
+    top: 61px;
+    left: 450px;
+    z-index: 1;
+    position: absolute;
+    width: fit-content;
+    top: 61px;
+    text-align: center;
+}
+.heading-3{
+    margin-bottom: 10px;
+    color: #558b2f;
+    transition: 0.5s;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Poppins";
+    line-height: 30px;
+}
+.heading-4{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: "Playfair Display";
+    line-height: 60px;
+}
+#selling .selling-card-text-1 button{
+    font-size: 18px;
+    height: 60px;
+    min-width: 170px;
+    padding: 0px 35px;
+    border: none;
+    background-color: #558b2f;
+    color: white;
+    font-weight: 600;
+
+}
+#selling .selling-card-text-1 button:hover{
+    background: transparent;
+    border: 1px solid #5d8834;
+    z-index: 11;
+    transition: 0.3s;
+    color: #5d8834;
+}
+#selling .selling-card-text-2{
+    top: 35%;
+    right: 0;
+    left: 345px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    width: fit-content;
+    position: absolute;
+}
+#selling .selling-card-text-3{
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    right: 35px;
+    display: flex;
+    height: 100%;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+}
+#selling .selling-card-text-3 .heading-5{
+    rotate: 90deg;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Playfair Display";
+    line-height: 60px;
+}
+
+
+/* 
+content */
+#text-new{
+    font-size: 45px;
+    font-weight: 600;
+    font-family: "Playfair Display";
+    line-height: 60px;
+    text-align: center;
+}
+.content button{
+    background-color: #558b2f;
+    font-weight: 500;
+
+}
+.content a{
+    text-decoration: none;
+}
+.content p,h5,a{
+    font-family: "Playfair Display";
+}
+/* image product */
+.image{
+    width: 100%;
+    height: 60%;
+overflow: hidden
+}
+img{
+transition: all 2s ease-in-out;
+}
+.image:hover img{
+transform: scale(2, 2);
+cursor: pointer
+}
+#img-top-rate{
+    width: 116px;
+    height: 158px;
+}
+/* end image product */
+
+/* subcribe */
+.section-sub-heading{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    font-family: "Playfair Display";
+}
+.heading-6{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.5px;
+}
+.subcribe-input input{
+    width: 400px;
+}
+/* end-subcribe */
+
+/* contact */
+.contact-text{
+    font-family: "Playfair Display";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21.33px;
+}
+.contact-head{
+    font-weight: 600;
+    font-family: "Playfair Display";
+    font-size: 20px;
+    line-height: 26.5px;
+}
+.contact-cards .contact-card .contact-card-body img{
+    margin-right: 19px;
+    vertical-align: middle;
+}
+.contact-card{
+    margin-top: 25px;
+    margin-bottom: 31px;
+    width: 280px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.contact-cards{
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.contact .container{
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+/* footer */
+#footer{
+    background-image: url(../../images/home/footer/bg.png);
+    color: white;
+    font-family: "Montserrat";
+}
+.logo{
+    max-width: 217px;
+    margin-bottom: 30px;
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+#footer .paragrap{
+    color: white;
+    max-width: 350px;
+    margin-bottom: 20px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+#footer .social-link{
+    display: flex;
+    gap: 10px;
+}
+#footer .social-link a{
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+
+.heading3{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: white;
+    font-family: "Playfair Display";
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 33px;
+    margin-left: 15px;
+}
+#footer ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#footer ul li{
+    margin-bottom: 10px;
+    transition: 0.3s ease-in-out;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+#footer ul li a{
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Montserrat";
+}
+#footer ul li a:hover{
+    color:#ffc107;
+}
+
+
+.coppyright{
+    border-top: 2px solid white;
+}
+.card-wrapper{
+    width: 46px;
+    padding: 3px;
+    border: 5px solid rgba(214, 214, 214, 0.452);
+    background: rgba(138, 138, 138, 0.062);
+    margin-left: 5px;
+}
+
+
+.fixed-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 5px 30px 0px rgba(34, 34, 34, 0.1);
+    z-index: 1111;
+    animation: slideDown 0.3s linear;
+    background: white; 
+}
+
+
+.top-card-star i{
+    color: #ffc107;
+}
+.square{
+    height: 130px;
+    width: 130px;
+}

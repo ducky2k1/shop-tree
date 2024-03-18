@@ -1,0 +1,118 @@
+.short-banner.profile-banner, .profile-banner.profile-banner {
+    background-image: url(../../images/profile/b-1.png);
+}
+.short-banner, .profile-banner {
+    padding: 100px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.heading2 {
+    font-family: "Playfair Display";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 53px;
+}
+.order-tracking .heading1,.order-tracking .heading2,.order-tracking .heading3,.order-tracking .heading4,.order-tracking .heading5,.order-tracking .heading6 {
+    font-style: normal;
+    color: #000000;
+}
+.short-banner.primary7 .heading2, .short-banner.primary7 .heading5, .profile-banner.primary7 .heading2, .profile-banner.primary7 .heading5 {
+    color: #f7f9f5;
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
+.order-tracking .heading3 {
+    font-family: "Playfair Display";
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 33px;
+}
+.order-tracking .info {
+    background: #eff3eb;
+    padding: 20px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.heading6 {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+.order-tracking .info .heading4 {
+    font-family: "Montserrat", sans-serif;
+}
+.ml-10 {
+    margin-left: 10px;
+}
+.heading4 {
+    font-family: "Playfair Display";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+}
+.heading5 {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+.order-tracking .tracker {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+.order-tracking .tracker .track-stepper {
+    position: relative;
+}
+.order-tracking .tracker .track-stepper .divider {
+    height: 8px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    border: 1px solid #5d8834;
+    z-index: -1;
+    background: transparent;
+}
+.order-tracking .tracker .track-stepper .divider::after {
+    content: "";
+    width: 66%;
+    height: 100%;
+    position: absolute;
+    background: #5d8834;
+    top: 0;
+    left: 0;
+}
+.order-tracking .tracker .track-stepper .icon-wrapper {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    background: #5d8834;
+    font-size: 30px;
+}
+.order-tracking .track-info {
+    max-width: 1100px;
+    padding: 40px 10px 0px 10px;
+}
+.order-tracking .order-notification {
+    max-width: 700px;
+}
+.order-tracking .order-notification .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #5d8834;
+}
+.order-tracking .order-notification .heading5 {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+}

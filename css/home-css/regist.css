@@ -1,0 +1,175 @@
+.square{
+    height: 130px;
+    width: 130px;
+}
+#signUp .signUp-body {
+    display: flex;
+}
+#signUp .signUp-body .signUp-picture {
+    display: flex;
+}
+#signUp .signUp-picture {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    animation: shake 15s linear infinite;
+    transition: 0.3 ease;
+}
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25%, 75% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+#signUp .signUp-body .signUp-picture img {
+    width: auto;
+}
+#signUp .signUp-body .signUp-welcome {
+    margin-left: 30px;
+    padding: 100px 0;
+}
+#signUp .signUp-welcome {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    flex: 1;
+}
+#signUp .signUp-welcome .signUp-item {
+    max-width: 415px;
+    width: 100%;
+    margin: 0 auto;
+}
+#signUp .signUp-welcome .heading3 {
+    font-weight: 700;
+    margin-bottom: 0px;
+    font-family: "Playfair Display";
+    font-size: 25px;
+    line-height: 33px;
+    font-style: normal;
+    color: #000000;
+    
+}
+#signUp .signUp-welcome .heading5 {
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "PlayFair Display";
+    color: #747d7c;
+    margin-bottom: 0px;
+    font-size: 18px;
+    font-style: normal;
+}
+#signUp .signUp-welcome .signUp-with-google {
+    display: flex;
+    border: 1px solid #5d8834;
+    justify-content: center;
+    align-items: center;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+#signUp .signUp-welcome .signUp-with-google img {
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+#signUp .signUp-welcome .signUp-with-google p {
+    margin-bottom: 0;
+}
+
+.heading4 {
+    font-family: "Playfair Display";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+}
+#signUp .signUp-welcome .signUp-or {
+    margin: 0px 0;
+    display: flex;
+}
+#signUp .signUp-welcome .signUp-or .hr1, #signUp .signUp-welcome .signUp-or .hr2 {
+    width: 40%;
+    border: 1px solid #747d7c;
+}
+#signUp .signUp-welcome .signUp-or p {
+    width: 20%;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    line-height: 24px;
+    font-size: 18px;
+    font-family: "PlayFair Display";
+    color: #747d7c;
+}
+#signUp .signUp-welcome .signUp-form form .heading5 {
+    font-weight: 500;
+    color: #465251;
+}
+#signUp .signUp-welcome .signUp-form form .email-input, #signUp .signUp-welcome .signUp-form form .password-input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #5d8834;
+    padding: 10px 0px 13px 28px;
+    outline: none;
+    background: transparent;
+    border-radius: 0px 0px 0px 0px;
+}
+#signUp .signUp-welcome .heading5 {
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "PlayFair Display";
+    color: #747d7c;
+    margin-bottom: 0px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+#signUp .signUp-welcome .signUp-form form .input-password {
+    position: relative;
+    margin: 20px 0 20px 0;
+}
+#signUp .signUp-welcome .signUp-form form .input-password i {
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+    color: gray;
+    font-size: 14px;
+}
+#signUp .signUp-welcome .signUp-form form .signUp-button {
+    width: 100%;
+    margin-top: 40px;
+}
+#signUp .signUp-welcome .signUp-form form .signUp-button button {
+    width: 100%;
+}
+#signUp .signUp-welcome .signUp-form form .signUp-login {
+    font-family: "PlayFair Display";
+    margin-top: 30px;
+}
+#signUp .signUp-welcome .signUp-form form .signUp-login .heading5 {
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "PlayFair Display";
+}
+#signUp .signUp-welcome .signUp-form form .signUp-login .heading5 a .heading2 {
+    font-size: 20px;
+    margin-left: 10px;
+    color: #5d8834;
+}
+.heading2 {
+    font-family: "Playfair Display";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 53px;
+}

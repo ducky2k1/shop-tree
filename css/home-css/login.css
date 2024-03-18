@@ -1,0 +1,199 @@
+.square{
+    width: 130px;
+    height: 130px;
+}
+#login .login-welcome {
+    padding: 40px 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+#login .login-welcome .login-item {
+    max-width: 415px;
+    width: 100%;
+    margin: 0 auto;
+}
+#login .heading3 {
+    font-family: "Playfair Display";
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 33px;
+    font-style: normal;
+    color: #000000;
+}
+#login .login-welcome .heading5 {
+    font-family: "PlayFair Display";
+}
+
+#login .heading5 {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+#login .login-welcome .login-with-google {
+    display: flex;
+    border: 1px solid #5d8834;
+    justify-content: center;
+    align-items: center;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+#login .login-welcome .login-with-google img {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+}
+.heading4 {
+    font-family: "Playfair Display";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+}
+#login .login-welcome .login-or {
+    margin: 0px 0;
+    display: flex;
+}
+#login .login-welcome .login-or .hr1, #login .login-welcome .login-or .hr2 {
+    width: 40%;
+    border: 1px solid #747d7c;
+}
+#login .login-welcome .login-or p {
+    width: 20%;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    line-height: 24px;
+    font-size: 18px;
+    font-family: "PlayFair Display";
+    color: #747d7c;
+}
+#login .login-welcome .login-form form .heading5 {
+    font-weight: 500;
+    color: #465251;
+}
+
+#login .login-welcome .login-form form .email-input, #login .login-welcome .login-form form .password-input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #5d8834;
+    padding: 10px 0px 13px 28px;
+    outline: none;
+    background: transparent;
+    border-radius: 0px 0px 0px 0px;
+}
+#login .login-welcome .heading5 {
+    font-family: "PlayFair Display";
+}
+.mt-20 {
+    margin-top: 20px;
+}
+#login .login-welcome .login-form .input-password {
+    position: relative;
+    margin: 20px 0 20px 0;
+}
+#login .login-welcome .login-form .input-password i {
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+    color: gray;
+    font-size: 14px;
+}
+#login .login-welcome .login-form form .heading5 {
+    font-weight: 500;
+    color: #465251;
+}
+#login .login-welcome .login-form form .login-forget {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+#login .login-welcome .heading5 {
+    font-family: "PlayFair Display";
+}
+#login .login-welcome .login-form form .login-forget .login-remember {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+#login .login-welcome .login-form form #remember-me {
+    height: 20px;
+    width: 20px;
+    accent-color: #5d8834;
+}
+
+#login .login-welcome .login-form form .login-forget .login-remember input {
+    margin-right: 10px;
+}
+label {
+    display: inline-block;
+}
+#login .login-welcome .login-form form .login-forget .login-forget-password p {
+    margin-bottom: 0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#login .login-welcome .login-form form .login-forget .login-forget-password p a {
+    color: inherit;
+}
+#login .login-welcome .login-form form .login-button {
+    width: 100%;
+}
+#login .login-welcome .login-form form .login-button button {
+    width: 100%;
+}
+#login .login-welcome .login-form form .login-signUp {
+    font-family: "PlayFair Display";
+    margin-top: 30px;
+}
+#login .login-welcome .login-form form .login-signUp .heading5 {
+    font-weight: 400;
+}
+#login .login-welcome .login-form form .login-signUp .heading5 a .heading2 {
+    font-size: 20px;
+    margin-left: 10px;
+    color: #5d8834;
+}
+.heading2 {
+    font-family: "Playfair Display";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 53px;
+}
+
+/* #img-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+} */
+.login-picture {
+    display: inline-block;
+    animation: shake 15s infinite;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25%, 75% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.login-picture img {
+    max-width: 100%;
+    height: auto;
+}

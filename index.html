@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="https://kit.fontawesome.com/e522de5ba4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/home-css/css-index.css">
+<script src="./js/bootstrap.js"></script>
+<script src="./js/angular.min.js"></script>
+<script src="./js/angular-route.js"></script>
+<script>
+    var myApp = angular.module("myApp",["ngRoute"]);
+
+    myApp.controller("myController", function($scope, $http,$location,cartService,$window){
+        $http.get("http://localhost:3000/sanpham?_sort=id&_limit=8").then(function(response){
+            $scope.danhSachSanPham = response.data;
+        })
+        $http.get("http://localhost:3000/danhmuc").then(function(response){
+            $scope.danhMucSanPham = response.data;
+        })
+        $http.get("http://localhost:3000/sanpham?_sort=id&_start=8&_end=14").then(function(response){
+            $scope.topRate = response.data;
+        })
+        $scope.addToCart = function (product) {
+        cartService.addToCart(product); // Gọi service để thêm vào giỏ hàng
+        $location.path('/cart'); // Chuyển đến trang giỏ hàng
+        };
+        //lấy thông tin tử session ra
+        $scope.userEmail =sessionStorage.getItem("user");
+        console.log($scope.userEmail);
+        if($scope.userEmail !== null){
+            $http.get("http://localhost:3000/user?email="+$scope.userEmail).then(function(response){
+            $scope.thongTin = response.data;
+        }) 
+        }
+            //xử lý đăng xuất
+            $scope.dangXuat = function(){
+                sessionStorage.removeItem("user");
+                $window.location.href="/index.html"
+            }
+    })
+    myApp.config(function ($routeProvider){
+        $routeProvider
+        .when("/", {
+                    templateUrl: "/user/trang-chu/trang-chu.html",
+                    controller: "trangChuController"
+                })
+        .when("/cart", {
+            templateUrl: "/user/cart/cart.html",
+            controller: "cartController"
+        })
+        .when("/detail/:id", {
+            templateUrl: "/user/detail/detail-product.html",
+            controller: "detailController"
+        })
+        .when("/contact", {
+            templateUrl: "/user/contact/contact.html",
+            controller: "contactController"
+        })
+        .when("/profile", {
+            templateUrl: "/user/profile/profile.html",
+            controller: "profileController"
+        })
+        .when("/product", {
+            templateUrl: "/user/product/product.html",
+            controller: "productController"
+        })
+        .when("/login", {
+            templateUrl: "/user/login/login.html",
+            controller: "loginController"
+        })
+        .when("/regist", {
+            templateUrl: "/user/regist/regist.html",
+            controller: "registController"
+        })
+        .when("/payment", {
+            templateUrl: "/user/payment/payment.html",
+            controller: "paymentController"
+        })
+
+    })
+
+</script>
+<script src="/user/trang-chu/trang-chu.js"></script>
+<script src="/user/cart/cart.js"></script>
+<script src="/user/detail/detail.js"></script>
+<script src="/user/contact/contact.js"></script>
+<script src="/user/profile/profile.js"></script>
+<script src="/user/product/product.js"></script>
+<script src="/cartService.js"></script>
+<script src="/user/login/login.js"></script>
+<script src="/user/regist/regist.js"></script>
+<script src="/user/payment/payment.js"></script>
+
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav_wrapper fixed-nav">
+            <div class="nav">
+                <div class="container-fluid" style="background-color: #5d8834;">
+                    <div class="nav-top container d-flex justify-content-between align-content-center">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <i class="mx-1 fa-solid fa-phone" style="color: #ffffff;"></i>
+                            <p class="mx-1 text-white" style="margin-bottom: 0;">Hotline: 0123456</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <i class="mx-1 fa-brands fa-facebook-f" style="color: white;"></i>
+                            <i class="mx-1 fa-brands fa-twitter" style="color: white;"></i>
+                            <i class="mx-1 fa-brands fa-instagram" style="color: white;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center w-100  navbar">
+                        <div class="logo">
+                            <a href="./index.html">
+                                <img src="./images/logo.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+
+                        <ul class="menu d-flex align-items-center justify-content-between">
+                            <li class=""><a href="./index.html">Home</a></li>
+                            <li class="dropdown-menus">
+                                <a href="">
+                                    Page
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <ul class="drop-menu">
+                                    <li class="d-flex justify-content-center align-content-center"><a href="#!cart"
+                                            class="text-white">Page Cart</a></li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                            href="#!detail" class="text-white">Detail Products Page</a>
+                                    </li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                            href="#!product" class="text-white">Products Page</a></li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                        href="./payment.html" class="text-white">Payment Page</a>
+                                    </li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                        href="./order-tracking.html" class="text-white">Order Tracking</a>
+                                    </li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                        href="#!profile" class="text-white">Profile</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-menus" ng-controller="myController">
+                                <a href="#!product">Product <i class="fa-solid fa-chevron-down"></i></a>
+                                <ul class="drop-menu" style="margin-left: -40px;">
+                                    <li class="d-flex justify-content-center align-content-center" ng-repeat="danhmuc in danhMucSanPham">
+                                        <a href="./product.html" class="text-white">{{danhmuc.ten}}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a href="#!contact">Contact Us </a>
+                            </li>
+                        </ul>
+
+
+                        <ul class="option d-flex align-items-center justify-content-between">
+                            <li class="d-flex">
+                                <input type="text">
+                                <div class="search btn btn-success">
+                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                                </div>
+
+                            </li>
+                            <li class="d-flex cart" style="position: relative;">
+                                <a href="#!cart">
+                                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                                    <span class="qty badge bg-danger rounded-pill" id="qty">10</span>
+                                </a>
+
+                            </li>
+                            <li class="logins" ng-controller="myController">
+                                <a class="btn btn-success rounded-4 btn-sm" ng-show="userEmail !== null" ng-repeat="tt in thongTin">Welcome {{tt.name}}</a>
+                                <a href="#!login" class="btn btn-success rounded-4 btn-sm" ng-show="userEmail === null">Login</a>
+                                <a href="#!regist" class="btn btn-success rounded-4 btn-sm" ng-show="userEmail === null">Register</a>
+                                <a ng-click="dangXuat()" class="btn btn-success rounded-4 btn-sm" ng-show="userEmail !== null">Log out</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <ng-view></ng-view>
+
+    <!-- -------------start-footer-------------- -->
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 mt-5">
+                    <div class="logo">
+                        <img src="./images/footer/logo.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="paragrap">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
+                        nulla eu dui suscipit ultricies. Mauris vestibulum volutpat nisl
+                        vel cursus. Cras finibus nec mauris tincidunt condimentum.
+                    </div>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/duc.trinh.54584"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-2 mt-5">
+                    <h3 class="heading3">
+                        Link
+                    </h3>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-3 mt-5">
+                    <h3 class="heading3">Get In Touch</h3>
+                    <ul class="address">
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                0123456
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-envelope"></i>
+                                example@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                                Trinh Van Bo, Ha Noi City
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3 mt-5">
+                    <h3 class="heading3">Other Links</h3>
+                    <ul>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid coppyright mt-5">
+            <div class="container">
+                <div class="d-flex py-3 justify-content-between align-items-center">
+                    <div class="paragrap">
+                        Copyright & Design by Trinh Viet Duc
+                    </div>
+                    <div class="d-flex">
+                        <div class="card-warpper">
+                            <img src="./images/footer/1.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-warpper">
+                            <img src="./images/footer/2.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-warpper">
+                            <img src="./images/footer/3.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-warpper">
+                            <img src="./images/footer/4.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+<!-- <script src="./js/home-js/script-cart.js"></script> -->
+
+</html>

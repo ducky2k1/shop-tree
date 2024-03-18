@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <title>Quản trị Admin</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="https://kit.fontawesome.com/e522de5ba4.js" crossorigin="anonymous"></script>
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/angular-route.js"></script>
+    <script>
+        var myApp = angular.module("myApp", ["ngRoute"]);
+
+        //khởi tạo header controller
+        myApp.controller("headerController", function ($scope, $window,$http) {
+            //check đăng nhập
+            //if đã đăng nhập show email ra header
+            //else thì điều hướng về đăng nhập
+            $scope.userHienTai = sessionStorage.getItem("user");
+            if ($scope.userHienTai === null) {
+                $window.location.href = "http://127.0.0.1:5501/index.html#!/login";
+            }else{
+                $http.get("http://localhost:3000/user?email="+$scope.userHienTai).then(function(response){
+                    $scope.thongTin = response.data
+                })
+            }
+            $scope.dangXuat = function () {
+                sessionStorage.removeItem("user");
+                $window.location.href = "http://127.0.0.1:5501/index.html#!/login";
+            }
+        })
+        // khởi tạo routing
+        myApp.config(function ($routeProvider) {
+            $routeProvider
+                .when("/", {
+                    templateUrl: "/admin/home/home.html",
+                    controller: "homeController"
+                })
+                .when("/danh-muc", {
+                    templateUrl: "/admin/danh-muc/danh-muc.html",
+                    controller: "danhMucController"
+                })
+                .when("/danh-muc/tao-moi", {
+                    templateUrl: "/admin/danh-muc/add-danh-muc.html",
+                    controller: "adddanhMucController"
+                })
+                .when("/danh-muc/edit/:id", {
+                    templateUrl: "/admin/danh-muc/edit.html",
+                    controller: "editdanhMucController"
+                })
+                .when("/customer", {
+                    templateUrl: "/admin/customer/list.html",
+                    controller: "listCustomerController"
+                })
+                .when("/customer/add", {
+                    templateUrl: "/admin/customer/add.html",
+                    controller: "addCustomerController"
+                })
+                .when("/customer/edit/:id", {
+                    templateUrl: "/admin/customer/edit.html",
+                    controller: "editCustomerController"
+                })
+                .when("/product", {
+                    templateUrl: "/admin/product/list.html",
+                    controller: "productController"
+                })
+                .when("/product/add", {
+                    templateUrl: "/admin/product/add.html",
+                    controller: "addProductController"
+                })
+                .when("/product/edit/:id&:idDM", {
+                    templateUrl: "/admin/product/edit.html",
+                    controller: "editProductController"
+                })
+                .when("/donHang", {
+                    templateUrl: "/admin/don-hang/list.html",
+                    controller: "donHangController"
+                })
+                .when("/donHang/edit/:id", {
+                    templateUrl: "/admin/don-hang/edit.html",
+                    controller: "editDonHangController"
+                })
+                
+        });
+    </script>
+    <script src="/admin/home/home.js"></script>
+    <script src="/admin/danh-muc/danh-muc.js"></script>
+    <script src="/admin/danh-muc/add.js"></script>
+    <script src="/admin/danh-muc/edit.js"></script>
+    <script src="/admin/customer/list.js"></script>
+    <script src="/admin/customer/add.js"></script>
+    <script src="/admin/customer/edit.js"></script>
+    <script src="/admin/product/list.js"></script>
+    <script src="/admin/product/add.js"></script>
+    <script src="/admin/product/edit.js"></script>
+    <script src="/admin/don-hang/list.js"></script>
+    <script src="/admin/don-hang/edit.js"></script>
+</head>
+
+<body onload="time()" class="app sidebar-mini rtl" ng-controller="headerController">
+    <!-- Navbar-->
+    <header class="app-header">
+        <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar"
+            aria-label="Hide Sidebar"></a>
+        <!-- Navbar Right Menu-->
+        <ul class="app-nav">
+
+
+            <!-- User Menu-->
+            <li><a class="app-nav__item" href="/index.html"><i class="fa-solid fa-right-from-bracket"></i> </a>
+
+            </li>
+        </ul>
+    </header>
+    <!-- Sidebar menu-->
+    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+    <aside class="app-sidebar">
+        <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="" width="50px" alt="User Image">
+            <div>
+                <p class="app-sidebar__user-name" ng-repeat="tt in thongTin"><b>{{tt.name}}</b></p>
+                <p class="app-sidebar__user-designation">Chào mừng bạn trở lại</p>
+            </div>
+        </div>
+        <hr>
+        <ul class="app-menu">
+            <li><a class="app-menu__item haha" href="#!"><i
+                        class='app-menu__icon fa-solid fa-gauge-simple-high'></i><span class="app-menu__label">Bảng điều
+                        khiển</span></a></li>
+            <li><a class="app-menu__item " href="#!danh-muc"><i class='app-menu__icon fa-solid fa-tags'></i>
+                    <span class="app-menu__label">Quản lý danh mục</span></a></li>
+            <!-- <li><a class="app-menu__item " href="./nhan-vien.html"><i class='app-menu__icon fa-solid fa-id-card'></i>
+                    <span class="app-menu__label">Quản lý nhân viên</span></a></li> -->
+            <li><a class="app-menu__item" href="#!customer"><i
+                        class='app-menu__icon fa-solid fa-user-pen'></i><span class="app-menu__label">Quản lý khách
+                        hàng</span></a></li>
+            <li><a class="app-menu__item" href="#!product"><i
+                        class='app-menu__icon fa-solid fa-cart-shopping'></i><span class="app-menu__label">Quản lý sản
+                        phẩm</span></a>
+            </li>
+            <li><a class="app-menu__item" href="#!donHang"><i
+                        class='app-menu__icon fa-solid fa-list-check'></i><span class="app-menu__label">Quản lý đơn
+                        hàng</span></a></li>
+            <!-- <li><a class="app-menu__item" href="./noi-bo.html"><i
+                        class='app-menu__icon fa-solid fa-person-running'></i><span class="app-menu__label">Quản lý nội
+                        bộ
+                    </span></a></li>
+            <li><a class="app-menu__item" href="./money.html"><i
+                        class='app-menu__icon fa-solid fa-sack-dollar'></i><span class="app-menu__label">Bảng kê
+                        lương</span></a></li>
+            <li><a class="app-menu__item" href="./doanh-thu.html"><i
+                        class='app-menu__icon fa-solid fa-calendar'></i><span class="app-menu__label">Báo cáo doanh
+                        thu</span></a>
+            </li> -->
+        </ul>
+    </aside>
+    <ng-view></ng-view>
+
+    <script src="../js/bootstrap.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/popper.min.js"></script>
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/plugins/pace.min.js"></script>
+    <!--===============================================================================================-->
+
+    <script type="text/javascript">
+        //Thời Gian
+        function time() {
+            var today = new Date();
+            var weekday = new Array(7);
+            weekday[0] = "Chủ Nhật";
+            weekday[1] = "Thứ Hai";
+            weekday[2] = "Thứ Ba";
+            weekday[3] = "Thứ Tư";
+            weekday[4] = "Thứ Năm";
+            weekday[5] = "Thứ Sáu";
+            weekday[6] = "Thứ Bảy";
+            var day = weekday[today.getDay()];
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1;
+            var yyyy = today.getFullYear();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            nowTime = h + " giờ " + m + " phút " + s + " giây";
+            if (dd < 10) {
+                dd = '0' + dd
+            }
+            if (mm < 10) {
+                mm = '0' + mm
+            }
+            today = day + ', ' + dd + '/' + mm + '/' + yyyy;
+            tmp = '<span class="date"> ' + today + ' - ' + nowTime +
+                '</span>';
+            document.getElementById("clock").innerHTML = tmp;
+            clocktime = setTimeout("time()", "1000", "Javascript");
+
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i;
+                }
+                return i;
+            }
+        }
+    </script>
+</body>
+
+</html>

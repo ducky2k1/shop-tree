@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking Page</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="https://kit.fontawesome.com/e522de5ba4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/home-css/css-index.css">
+    <link rel="stylesheet" href="./css/home-css/order-tracking.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_wrapper fixed-nav">
+            <div class="nav">
+                <div class="container-fluid" style="background-color: #5d8834;">
+                    <div class="nav-top container d-flex justify-content-between align-content-center">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <i class="mx-1 fa-solid fa-phone" style="color: #ffffff;"></i>
+                            <p class="mx-1 text-white" style="margin-bottom: 0;">Hotline: 0123456</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <i class="mx-1 fa-brands fa-facebook-f" style="color: white;"></i>
+                            <i class="mx-1 fa-brands fa-twitter" style="color: white;"></i>
+                            <i class="mx-1 fa-brands fa-instagram" style="color: white;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center w-100  navbar">
+                        <div class="logo">
+                            <a href="./index.html">
+                                <img src="./images/logo.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+
+                        <ul class="menu d-flex align-items-center justify-content-between">
+                            <li class=""><a href="./index.html">Home</a></li>
+                            <li class="dropdown-menus">
+                                <a href="">
+                                    Page
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <ul class="drop-menu">
+                                    <li class="d-flex justify-content-center align-content-center"><a href="./cart.html"
+                                            class="text-white">Page Cart</a></li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                            href="./detail-product.html" class="text-white">Detail Products Page</a>
+                                    </li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                            href="./product.html" class="text-white">Products Page</a></li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                        href="./payment.html" class="text-white">Payment Page</a>
+                                    </li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                        href="./order-tracking.html" class="text-white">Order Tracking</a>
+                                    </li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                        href="./profile.html" class="text-white">Profile</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class=""><a href="./product.html">Product</a></li>
+                            <li class=""><a href="./contact.html">Contact Us</a></li>
+                        </ul>
+
+
+                        <ul class="option d-flex align-items-center justify-content-between">
+                            <li class="d-flex">
+                                <input type="text">
+                                <div class="search btn btn-success">
+                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                                </div>
+
+                            </li>
+                            <li class="d-flex cart" style="position: relative;">
+                                <a href="./cart.html">
+                                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                                    <span class="qty badge bg-danger rounded-pill" id="qty">10</span>
+                                </a>
+
+                            </li>
+                            <li class="logins">
+                                <a href="./login.html" class="btn btn-success rounded-4 btn-sm">Login</a>
+                                <a href="./regist.html" class="btn btn-success rounded-4 btn-sm">Register</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- -content -->
+    <div class="order-tracking" style="margin-top: 138px;">
+        <!-- Header Short Banner Start -->
+        <div class="profile-banner primary7">
+          <h2 class="heading2 text-center">Order Tracking</h2>
+        </div>
+        <!-- Header Short Banner End -->
+    
+        <!-- Section padding -->
+        <div class="square"></div>
+    
+        <!-- Profile Order Summery Section Start -->
+        <div class="container">
+          <h3 class="heading3 mb-40">Order Tracking :</h3>
+    
+          <div class="info">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between">
+              <div class="left">
+                <div class="d-flex align-items-center">
+                  <div class="heading6 mb-10">Order ID:</div>
+                  <h3 class="heading4 ml-10">#1234567</h3>
+                </div>
+    
+                <h5 class="heading5">
+                  Placed at : 14 Ngo 1/8 Dinh Thon, My Dinh, Nam Tu Liem, Ha Noi
+                </h5>
+              </div>
+    
+              <div class="right">
+                <div class="d-flex align-items-center">
+                  <div class="heading6 mb-10">Total Price :</div>
+    
+                  <h3 class="heading4 ml-10">$50</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Section padding -->
+          <div class="square"></div>
+    
+          <div class="tracker">
+            <div class="d-flex align-items-center justify-content-between track-stepper">
+              <div class="divider"></div>
+              <div class="icon-wrapper">
+                <i class="fa-regular fa-folder"></i>
+              </div>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+    
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-truck"></i>
+              </div>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-box"></i>
+              </div>
+            </div>
+          </div>
+          <div class="track-info d-flex justify-content-between pt-40 mx-auto">
+            <h6 class="heading5 text-center">Order Received</h6>
+            <h6 class="heading5 text-center">Order Processed</h6>
+            <h6 class="heading5 text-center">Order Shipped</h6>
+            <h6 class="heading5 text-center">Order Delivered</h6>
+          </div>
+    
+          <!-- Section padding -->
+          <div class="square"></div>
+    
+          <div class="order-notification mx-auto">
+            <div class="d-flex mb-10">
+              <div class="circle"></div>
+              <h5 class="heading5">
+                Your ordere has been received. Thank you for shopping at SolPlant!
+              </h5>
+            </div>
+            <div class="d-flex mb-10">
+              <div class="circle"></div>
+              <h5 class="heading5">
+                Your order has been processed &amp; it is going to shipped
+              </h5>
+            </div>
+            <div class="d-flex mb-10">
+              <div class="circle"></div>
+              <h5 class="heading5">
+                Your order has been shipped &amp; it is going to delivered soon.
+              </h5>
+            </div>
+          </div>
+        </div>
+        <!-- Profile Order Summery Section End -->
+    
+        <!-- Section padding -->
+        <div class="square"></div>
+      </div>
+    <!-- end content -->
+
+
+    <!-- -------------start-footer-------------- -->
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 mt-5">
+                    <div class="logo">
+                        <img src="./images/footer/logo.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="paragrap">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
+                        nulla eu dui suscipit ultricies. Mauris vestibulum volutpat nisl
+                        vel cursus. Cras finibus nec mauris tincidunt condimentum.
+                    </div>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/duc.trinh.54584"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-2 mt-5">
+                    <h3 class="heading3">
+                        Link
+                    </h3>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-3 mt-5">
+                    <h3 class="heading3">Get In Touch</h3>
+                    <ul class="address">
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                0123456
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-envelope"></i>
+                                example@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                                Trinh Van Bo, Ha Noi City
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3 mt-5">
+                    <h3 class="heading3">Other Links</h3>
+                    <ul>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid coppyright mt-5">
+            <div class="container">
+                <div class="d-flex py-3 justify-content-between align-items-center">
+                    <div class="paragrap">
+                        Copyright & Design by Trinh Viet Duc
+                    </div>
+                    <div class="d-flex">
+                        <div class="card-warpper">
+                            <img src="./images/footer/1.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-warpper">
+                            <img src="./images/footer/2.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-warpper">
+                            <img src="./images/footer/3.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-warpper">
+                            <img src="./images/footer/4.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+<script src="./js/home-js/script-cart.js"></script>
+<script src="./js/home-js/script-index.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+</html>

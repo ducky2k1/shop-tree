@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="./css/home-css/css-index.css">
+<link rel="stylesheet" href="./css/home-css/login.css">
+<!-- login -->
+    <section id="login" style="margin-top: 138px;">
+        <div class="square"></div>
+        <div class="login-body container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="login-welcome">
+                        <div class="login-item">
+                            <div>
+                                <img src="./images/login/Frame.png" alt="">
+                            </div>
+                            <h3 class="heading3">Welcome Back SolPlant</h3>
+                            <h5 class="heading5">
+                                Welcome Back , Please enter your details.
+                            </h5>
+
+                            <div class="login-with-google">
+                                <img src="./images/login/google icon.png" alt="">
+                                <h4 class="heading4">Log In With Google</h4>
+                            </div>
+
+                            <div class="login-or">
+                                <hr class="hr1">
+                                <p>OR</p>
+                                <hr class="hr2">
+                            </div>
+
+                            <div class="login-form">
+                                <form ng-submit="dangNhap()">
+                                    <!-- <input type="email" placeholder="Email Address" class="email-input heading5 mt-20"
+                                        fdprocessedid="64nrhv"> -->
+                                    <input ng-model="user.email" type="email" class="email-input heading5 mt-20" id="email" placeholder="Enter email" name="email">
+                                    <div class="input-password">
+                                        <!-- <input type="password" id="password" placeholder="Password"
+                                            class="password password-input heading5" fdprocessedid="pnft25"> -->
+                                            <input ng-model="user.password" type="password" class="password password-input heading5" id="pwd" placeholder="Enter password" name="pswd">
+                                        <i class="fas fa-eye-slash" id="eye"></i>
+                                    </div>
+                                    <div class="login-forget heading5">
+                                        <div class="login-remember mb-20">
+                                            <input type="checkbox" id="remember-me" class="">
+                                            <label for="remember-me" class="">Remember Me</label>
+                                        </div>
+                                        <div class="login-forget-password mb-20">
+                                            <p>
+                                                <a href="/changepassword">Forgot Password</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="login-button">
+                                        <button class="button-1" type="submit">Log In</button>
+                                    </div>
+                                    <div class="login-signUp">
+                                        <p class="heading5">
+                                            Don't Have An Account?
+                                            <a href="./regist.html" class="text-decoration-none"><span
+                                                    class="heading2">Sign Up</span></a>
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="alert alert-danger alert-dismissible mt-3" ng-show="!formHopLe ">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <strong>Đăng nhập không thành công!</strong> 
+                    <br>
+                    {{formThongBao}}
+                </div>
+
+                <div class="col-lg-6" id="img-content">
+                    <div class="login-picture shake-animation">
+                        <img class="img-fluid anim-img" data-value="1" src="images/login/login.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section padding -->
+    <div class="square"></div>
+
+
+    <!-- end login -->

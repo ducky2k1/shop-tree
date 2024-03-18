@@ -1,0 +1,128 @@
+<link rel="stylesheet" href="/css/home-css/css-index.css">
+<link rel="stylesheet" href="/css/home-css/cart.css">
+<link rel="stylesheet" href="/css/home-css/product.css">
+<div class="profile-cart" style="margin-top: 138px;">
+    <div class="profile-banner">
+        <h2 class="heading2 text-center" style="color: #5d8834;">Products Page</h2>
+    </div>
+</div>
+<!-- products list -->
+<div class="product-list">
+    <div class="square"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3" style="margin-bottom: 30px;">
+                <h3 class="heading3">Product Categories</h3>
+                <h4 class="heading4 primary" ng-click="all()">All</h4>
+                <ul ng-repeat="dm in danhMuc" class="" style="padding: 0px;">
+                    <li style="margin-left: 0px;"><a ng-click="fil(dm.id)" class="text-decoration-none text-black"><h4 class="heading4">{{dm.ten}}</h4></a></li>
+                </ul>
+                
+                <h4 class="heading4 price" style="padding-bottom: 10px; margin-top: 40px;">Filter by price</h4>
+                <div class="slider-wrapper">
+                    <div class="wrapper">
+                        <div class="slider">
+                            <div class="progress" ng-style="{ width: progressWidth }"></div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="form-range range-min custom-range" min="0" max="100"
+                                ng-model="minVal" step="1">
+                            <input type="range" class="form-range range-max custom-range" min="0" max="100"
+                                ng-model="maxVal" step="1">
+                        </div>
+
+                        <div class="price-input">
+                            Price
+
+                            <div class="field heading5" style="margin-left: 5px;">
+                                <input type="number" class="form-control input-min" ng-model="minVal" />
+                                $
+                            </div>
+                            <div class="separator">-</div>
+                            <div class="field heading5">
+                                <input type="number" class="form-control input-max" ng-model="maxVal" />
+                                $
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="button-1">
+                    Filter
+                </button>
+
+            </div>
+            <div class="col-lg-9">
+                <div class="sort" style="margin-bottom: 40px;">
+                    <div class="d-flex flex-column flex-md-row justify-content-end">
+                        <div class="d-flex align-items-center ">
+                            <h4 class="heading4" style="padding-right: 30px;">Sort by</h4>
+                        </div>
+                        <div class="option_wrapper  sort-by">
+                            <select name="sort" id="sort" fdprocessedid="xlifus">
+                                <option value="">Default</option>
+                                <option value="Price Low to Height">
+                                    Price Low to Height
+                                </option>
+                                <option value="Price Height to Low ">
+                                    Price Height to Low
+                                </option>
+                                <option value="Small ">Small</option>
+                                <option value="Big ">Big</option>
+                                <option value="Recent">Recent</option>
+                                <option value="Top Selling">Top Selling</option>
+                            </select>
+                            <label class="down_arrow">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row" >
+                    <div class="col-sm-6 col-lg-4" ng-repeat="sp in danhSach">
+                        <div class="product-card">
+                            <div class="img-wrapper mb-20">
+                                <a href="#!detail/{{sp.id}}">
+                                    <img src="{{sp.image}}" alt="" class="img-fluid img-wrapper"
+                                        style="width: 306px; height: 325px;">
+                                </a>
+                            </div>
+                            <a href="#!detail/{{sp.id}}" class="text-decoration-none">
+                                <h5 class="heading5">{{sp.name}}</h5>
+                            </a>
+                            <div class="paragraph text-center">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center" style="padding: 0px 100px 0px 100px;">
+                            <h4 class="heading4 text-decoration-line-through text-muted" style="margin-top: 20px;">${{sp.price}}</h4>
+                            <h3 class="heading3 text-center">${{sp.sale}}</h3>
+
+                            </div>
+                            <div class="d-flex justify-content-center align-content-center btn-cart">
+                                <a href="./payment.html"
+                                    class="d-flex justify-content-center align-items-center text-decoration-none me-2"><button
+                                        class="btn btn-success rounded-pill" fdprocessedid="ie83gq">Buy now</button></a>
+                                <a href="./cart.html"
+                                    class="d-flex justify-content-center align-items-center text-decoration-none"><button
+                                        class="btn btn-success rounded-pill" fdprocessedid="n7mt2l">Add to
+                                        cart</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <ul class="pagination d-flex align-items-center justify-content-center" style="margin-top: 60px;">
+                    <!-- <li class="page-item"><a class="page-link" ng-click="pre()">Previous</a></li> -->
+                    <li class="page-item"><a class="page-link" ng-click="pre()">1</a></li>
+                    <li class="page-item"><a class="page-link" ng-click="next()">2</a></li>
+                    <li class="page-item"><a class="page-link" ng-click="third()">3</a></li>
+                    <!-- <li class="page-item"><a class="page-link" ng-click="next()">Next</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="square">
+    </div>
+</div>
+<!-- end products list -->

@@ -1,0 +1,213 @@
+{
+  "danhmuc": [
+    {
+      "id": 1,
+      "ten": "Medium"
+    },
+    {
+      "id": 2,
+      "ten": "Small"
+    },
+    {
+      "id": 3,
+      "ten": "Tiny"
+    }
+  ],
+  "sanpham": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "price": 110,
+      "sale": 99,
+      "image": "/images/products/1.png",
+      "idDanhMuc": 1,
+      "luotMua": 2
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "price": 110,
+      "sale": 99,
+      "image": "/images/products/2.png",
+      "idDanhMuc": 1,
+      "luotMua": 2
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "price": 110,
+      "sale": 99,
+      "image": "/images/products/3.png",
+      "idDanhMuc": 2,
+      "luotMua": 2
+    },
+    {
+      "id": 4,
+      "name": "Product 4",
+      "price": 110,
+      "sale": 99,
+      "image": "/images/products/4.png",
+      "idDanhMuc": 2,
+      "luotMua": 2
+    },
+    {
+      "id": 5,
+      "name": "Product 5",
+      "price": 110,
+      "sale": 99,
+      "image": "/images/products/5.png",
+      "idDanhMuc": 2,
+      "luotMua": 2
+    },
+    {
+      "id": 6,
+      "name": "Product 6",
+      "price": 110,
+      "sale": 99,
+      "image": "/images/products/6.png",
+      "idDanhMuc": 3,
+      "luotMua": 2
+    },
+    {
+      "id": 7,
+      "name": "Product 7",
+      "price": 110,
+      "sale": 99,
+      "image": "/images/products/7.png",
+      "idDanhMuc": 3,
+      "luotMua": 2
+    },
+    {
+      "id": 8,
+      "name": "Product 8",
+      "price": 110,
+      "sale": 99,
+      "image": "/images/products/8.png",
+      "idDanhMuc": 3,
+      "luotMua": 2
+    },
+    {
+      "id": 9,
+      "name": "Product 1",
+      "price": 110,
+      "sale": 99,
+      "image": "/images/home/top rated product/double.png",
+      "idDanhMuc": 1,
+      "luotMua": 50
+    },
+    {
+      "id": 10,
+      "name": "Product 2",
+      "price": 110,
+      "sale": 99,
+      "image": "/images/home/top rated product/eled.png",
+      "idDanhMuc": 1,
+      "luotMua": 50
+    },
+    {
+      "id": 11,
+      "name": "Product 3",
+      "price": 110,
+      "sale": 99,
+      "image": "/images/home/top rated product/fringilla.png",
+      "idDanhMuc": 1,
+      "luotMua": 50
+    },
+    {
+      "id": 12,
+      "name": "Product 4",
+      "price": 110,
+      "sale": 99,
+      "image": "/images/home/top rated product/fringilla_2.png",
+      "idDanhMuc": 2,
+      "luotMua": 50
+    },
+    {
+      "id": 13,
+      "name": "Product 5",
+      "price": 110,
+      "sale": 99,
+      "image": "/images/home/top rated product/plant.png",
+      "idDanhMuc": 3,
+      "luotMua": 50
+    },
+    {
+      "id": 14,
+      "name": "Product 6",
+      "price": 110,
+      "sale": 99,
+      "image": "/images/home/top rated product/sleeves.png",
+      "idDanhMuc": 3,
+      "luotMua": 50
+    },
+    {
+      "name": "test",
+      "price": "12",
+      "sale": "1",
+      "image": "https://images2.thanhnien.vn/528068263637045248/2023/5/11/base64-16837743248862079454315.png",
+      "idDanhMuc": "1",
+      "luotMua": "",
+      "id": 15
+    }
+  ],
+  "user": [
+    {
+      "email": "trinhduc59@gmail.com",
+      "password": "1234",
+      "name": "Trịnh Việt Đức",
+      "id": 1
+    },
+    {
+      "email": "a123@gmail.com",
+      "password": "123456",
+      "name": "Trần Văn a",
+      "id": 2
+    },
+    {
+      "email": "hihi1@gmail.com",
+      "password": "123456",
+      "name": "Văn C",
+      "id": 3
+    },
+    {
+      "name": "Văn D E",
+      "email": "D2@gmail.com",
+      "password": "1234",
+      "id": 4
+    }
+  ],
+  "hoadon": [
+    {
+      "id": 1,
+      "fisrtName": "trinh",
+      "lastName": "duc",
+      "email": "trinhduc59@gmail.com",
+      "phone": "0123456",
+      "address": "Hà nội"
+    },
+    {
+      "id": 2,
+      "fisrtName": "Đức",
+      "lastName": "Hhihi",
+      "email": "a123456@gmail.com",
+      "phone": "123456",
+      "address": "hd"
+    },
+    {
+      "id": 3,
+      "fisrtName": "hi",
+      "lastName": "test",
+      "email": "test2@gmail.com",
+      "phone": "123456",
+      "address": "hd"
+    },
+    {
+      "id": 4,
+      "fisrtName": "test",
+      "lastName": "duc",
+      "email": "test1@gmail.com",
+      "phone": "1234",
+      "address": "hd"
+    }
+  ]
+}

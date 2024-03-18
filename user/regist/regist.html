@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="./css/home-css/css-index.css">
+<link rel="stylesheet" href="./css/home-css/regist.css">
+ <!-- regisst -->
+    <section id="signUp" style="margin-top: 138px;">
+        <!-- welcome -->
+        <div class="square"></div>
+        <div class="signUp-body container">
+            <div class="signUp-picture">
+                <img class="anim-img" data-value="1" src="images/login/signUp.png" alt="">
+            </div>
+
+            <div class="signUp-welcome">
+                <div class="signUp-item">
+                    <p class="heading3">Welcome Back SolPlant</p>
+                    <p class="heading5">Please enter your details.</p>
+
+                    <div class="signUp-with-google">
+                        <img class="mr-10" src="./images/login/google icon.png" alt="">
+                        <p class="heading4">Sign up With Google</p>
+                    </div>
+
+                    <div class="signUp-or">
+                        <hr class="hr1">
+                        <p>OR</p>
+                        <hr class="hr2">
+                    </div>
+
+                    <div class="signUp-form">
+                        <form ng-submit="dangKy()">
+                            <input type="text" placeholder="Enter your name" class="email-input heading5 mt-20"
+                                fdprocessedid="phc4e" ng-model="user.name">
+                            <input type="email" placeholder="Enter your email address" class="email-input heading5 mt-20"
+                                fdprocessedid="294ton" ng-model="user.email">
+
+                            <div class="input-password">
+                                <input type="password" id="password" placeholder="Password"
+                                    class="password password-input heading5" fdprocessedid="2vs8bp" ng-model="user.password">
+                                <i class="fas fa-eye-slash" id="eye"></i>
+                            </div>
+
+                            <div class="input-password">
+                                <input type="password" id="password" placeholder="Re-type password"
+                                    class="password password-input heading5" fdprocessedid="ajwv7" ng-model="rePass">
+                                <i class="fas fa-eye-slash" id="confirmeye"></i>
+                            </div>
+                            <div class="signUp-button">
+                                <button class="button-1" fdprocessedid="047fj" type="submit">Sign Up</button>
+                            </div>
+                            <div class="signUp-login">
+                                <p class="heading5">
+                                    Already Have An Account?
+                                    <a href="./login.html" class="text-decoration-none">
+                                        <span class="heading2">Log In</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="alert alert-danger alert-dismissible mt-3" ng-show="!formHopLe ">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <strong>Đăng ký không thành công!</strong> 
+                    <br>
+                    {{formThongBao}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section padding -->
+    <div class="square"></div>
+
+
+    <!-- end regist -->

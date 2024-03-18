@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="https://kit.fontawesome.com/e522de5ba4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/home-css/css-index.css">
+    <link rel="stylesheet" href="./css/home-css/cart.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_wrapper fixed-nav">
+            <div class="nav">
+                <div class="container-fluid" style="background-color: #5d8834;">
+                    <div class="nav-top container d-flex justify-content-between align-content-center">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <i class="mx-1 fa-solid fa-phone" style="color: #ffffff;"></i>
+                            <p class="mx-1 text-white" style="margin-bottom: 0;">Hotline: 0123456</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <i class="mx-1 fa-brands fa-facebook-f" style="color: white;"></i>
+                            <i class="mx-1 fa-brands fa-twitter" style="color: white;"></i>
+                            <i class="mx-1 fa-brands fa-instagram" style="color: white;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center w-100  navbar">
+                        <div class="logo">
+                            <a href="./index.html">
+                                <img src="./images/logo.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+
+                        <ul class="menu d-flex align-items-center justify-content-between">
+                            <li class=""><a href="./index.html">Home</a></li>
+                            <li class="dropdown-menus">
+                                <a href="">
+                                    Page
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <ul class="drop-menu">
+                                    <li class="d-flex justify-content-center align-content-center"><a href="./cart.html"
+                                            class="text-white">Page Cart</a></li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                            href="./detail-product.html" class="text-white">Detail Products Page</a>
+                                    </li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                            href="./product.html" class="text-white">Products Page</a></li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                        href="./payment.html" class="text-white">Payment Page</a>
+                                    </li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                        href="./order-tracking.html" class="text-white">Order Tracking</a>
+                                    </li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                        href="./profile.html" class="text-white">Profile</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class=""><a href="./product.html">Product</a></li>
+                            <li class=""><a href="./contact.html">Contact Us</a></li>
+                        </ul>
+
+
+                        <ul class="option d-flex align-items-center justify-content-between">
+                            <li class="d-flex">
+                                <input type="text">
+                                <div class="search btn btn-success">
+                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                                </div>
+
+                            </li>
+                            <li class="d-flex cart" style="position: relative;">
+                                <a href="./cart.html">
+                                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                                    <span class="qty badge bg-danger rounded-pill" id="qty">10</span>
+                                </a>
+
+                            </li>
+                            <li class="logins">
+                                <a href="./login.html" class="btn btn-success rounded-4 btn-sm">Login</a>
+                                <a href="./regist.html" class="btn btn-success rounded-4 btn-sm">Register</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="profile-cart" style="margin-top: 138px;">
+        <div class="profile-banner">
+            <h2 class="heading2 text-center">Cart Page</h2>
+        </div>
+        <!-- -----cart-section-start--------- -->
+        <div class="container">
+            <div class="square"></div>
+            <h4 class="heading3">Selected Item : 3</h4>
+            <div class="row" style="margin-bottom: 20px;">
+                <div class="col-md-8">
+                    <div class="cart_table">
+
+                        <div class="product d-flex justify-content-between align-items-center p-3">
+                            <div class="item1">
+                                <div class="d-flex">
+                                    <img src="./images/profile/cart/2.png" alt="" class="img-fluid">
+                                    <div class="" style="margin-left: 20px;">
+                                        <h4 class="heading4" style="margin-bottom: 20px;">Aliquam Vel</h4>
+                                        <h3 class="heading3">$<span class="item-price">30</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item2">
+                                <div class="d-flex">
+                                    <div class="d-flex align-items-center quantity-wrapper">
+                                        <div class="d-flex quantity">
+                                            <button class="quantity-left-minus">
+                                                <span class="quantity-down">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </span>
+                                            </button>
+                                            <input type="number" min="1" max="100" step="1" value="1" readonly>
+                                            <button class="quantity-right-plus">
+                                                <span class="quantity-up">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item3">
+                                <h3 class="heading3 main-price">$<span class="total-price">30.00</span></h3>
+                            </div>
+                        </div>
+                        <div class="product d-flex justify-content-between align-items-center p-3">
+                            <div class="item1">
+                                <div class="d-flex">
+                                    <img src="./images/profile/cart/3.png" alt="" class="img-fluid">
+                                    <div class="" style="margin-left: 20px;">
+                                        <h4 class="heading4" style="margin-bottom: 20px;">Aliquam Vel</h4>
+                                        <h3 class="heading3">$<span class="item-price">30</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item2">
+                                <div class="d-flex">
+                                    <div class="d-flex align-items-center quantity-wrapper">
+                                        <div class="d-flex quantity">
+                                            <button class="quantity-left-minus">
+                                                <span class="quantity-down">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </span>
+                                            </button>
+                                            <input type="number" min="1" max="100" step="1" value="1" readonly>
+                                            <button class="quantity-right-plus">
+                                                <span class="quantity-up">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item3">
+                                <h3 class="heading3 main-price">$<span class="total-price">30.00</span></h3>
+                            </div>
+                        </div>
+                        <div class="product d-flex justify-content-between align-items-center p-3">
+                            <div class="item1">
+                                <div class="d-flex">
+                                    <img src="./images/profile/cart/4.png" alt="" class="img-fluid">
+                                    <div class="" style="margin-left: 20px;">
+                                        <h4 class="heading4" style="margin-bottom: 20px;">Aliquam Vel</h4>
+                                        <h3 class="heading3">$<span class="item-price">30</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item2">
+                                <div class="d-flex">
+                                    <div class="d-flex align-items-center quantity-wrapper">
+                                        <div class="d-flex quantity">
+                                            <button class="quantity-left-minus">
+                                                <span class="quantity-down">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </span>
+                                            </button>
+                                            <input type="number" min="1" max="100" step="1" value="1" readonly>
+                                            <button class="quantity-right-plus">
+                                                <span class="quantity-up">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item3">
+                                <h3 class="heading3 main-price">$<span class="total-price">30.00</span></h3>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="more">
+
+                        Do you want to add more?
+                        <a href="./product.html">Click Here</a>
+
+                    </div>
+                </div>
+                <div class="col-md-4 cart-info">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h4 class="heading4" style="color: #5d8834;">Total</h4>
+                        <h4 class="heading5" style="margin-right: 10px;">$ <span class="total-price" id="sum-price">00.00</span></h4>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between" style="margin-bottom: 10px;">
+                        <h4 class="heading4" style="color: #5d8834;">Delivery Charge</h4>
+                        <h4 class="heading5" style="margin-right: 10px;">$ <span class="total-price" id="delivery-charge">10</span></h4>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="d-flex align-items-center justify-content-between" style="margin-top: 20px;">
+                        <h4 class="heading4" style="color: #5d8834;">Payable Amount</h4>
+                        <h4 class="heading5" style="margin-right: 10px;">$ <span class="total-price" id="payable-amount">210</span></h4>
+                    </div>
+                    <div class="preferred">
+                        Preferred Delivery Timings
+                    </div>
+                    <!-- delivery time -->
+                    <div class="delivery-time">
+                        <div class="heading6">
+                            When would you like your delivery?
+                        </div>
+                        <div class="d-flex gap-3 flex-wrap justify-content-between" style="margin-top: 20px;">
+                            <div class="left d-flex justify-content-center align-items-center">
+                                <div class="date">
+                                    <input type="date" data-date="25 February 2023" data-date-format="DD MMMM YYYY" value="2023-02-25">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end delivery time -->
+                    <div class="confirmation d-flex justify-content-center align-items-center">
+                        <h5 class="heading6 text-center">    
+                            Are you sure you want to order?
+                        </h5>
+                        <a href="./payment.html" class="text-decoration-none">
+                            <button class="button-1">Place Order</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------cart-section-end----------- -->
+    </div>
+
+
+    <!-- -------------start-footer-------------- -->
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 mt-5">
+                    <div class="logo">
+                        <img src="./images/footer/logo.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="paragrap">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
+                        nulla eu dui suscipit ultricies. Mauris vestibulum volutpat nisl
+                        vel cursus. Cras finibus nec mauris tincidunt condimentum.
+                    </div>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/duc.trinh.54584"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-2 mt-5">
+                    <h3 class="heading3">
+                        Link
+                    </h3>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-3 mt-5">
+                    <h3 class="heading3">Get In Touch</h3>
+                    <ul class="address">
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                0123456
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-envelope"></i>
+                                example@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                                Trinh Van Bo, Ha Noi City
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3 mt-5">
+                    <h3 class="heading3">Other Links</h3>
+                    <ul>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid coppyright mt-5">
+            <div class="container">
+                <div class="d-flex py-3 justify-content-between align-items-center">
+                    <div class="paragrap">
+                        Copyright & Design by Trinh Viet Duc
+                    </div>
+                    <div class="d-flex">
+                        <div class="card-warpper">
+                            <img src="./images/footer/1.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-warpper">
+                            <img src="./images/footer/2.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-warpper">
+                            <img src="./images/footer/3.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-warpper">
+                            <img src="./images/footer/4.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+<!-- <script src="./js/home-js/script-cart.js"></script> -->
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Lấy tất cả các nút "minus" và "plus"
+    const minusButtons = document.querySelectorAll(".quantity-left-minus");
+    const plusButtons = document.querySelectorAll(".quantity-right-plus");
+
+    // Lấy các input số lượng và giá của từng sản phẩm
+    const quantityInputs = document.querySelectorAll(".item2 input");
+    const itemPrices = document.querySelectorAll(".item3 .total-price");
+
+    // Lấy phần tử hiển thị tổng giá trị
+    const totalElement = document.getElementById("sum-price");
+    
+
+    // Gán sự kiện click cho các nút "minus" và "plus"
+    minusButtons.forEach((button, index) => {
+        button.addEventListener("click", function () {
+            updateQuantity(index, -1);
+        });
+    });
+
+    plusButtons.forEach((button, index) => {
+        button.addEventListener("click", function () {
+            updateQuantity(index, 1);
+        });
+    });
+
+    // Hàm cập nhật số lượng và tổng giá trị
+    function updateQuantity(index, change) {
+        const currentQuantity = parseInt(quantityInputs[index].value);
+        const newQuantity = currentQuantity + change;
+
+        if (newQuantity >= 1 && newQuantity <= 100) {
+            quantityInputs[index].value = newQuantity;
+            const itemPrice = parseFloat(itemPrices[index].textContent);
+            itemPrices[index].textContent = (itemPrice / currentQuantity * newQuantity).toFixed(2); // Cập nhật giá tiền theo số lượng mới
+            updateTotalPrice();
+        }
+    }
+
+    // Hàm cập nhật tổng giá trị
+    function updateTotalPrice() {
+        let totalAmount = 0;
+
+        itemPrices.forEach((priceElement) => {
+            totalAmount += parseFloat(priceElement.textContent);
+        });
+
+        totalElement.textContent = totalAmount.toFixed(2); // Làm tròn đến 2 chữ số thập phân
+    }
+    
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Lấy các phần tử cần thiết
+    const totalElement = document.getElementById("sum-price");
+    const deliveryChargeElement = document.getElementById("delivery-charge");
+    const payableAmountElement = document.getElementById("payable-amount");
+
+    // Lấy giá trị ban đầu của "Total" và "Delivery Charge"
+    const initialTotal = parseFloat(totalElement.textContent);
+    const initialDeliveryCharge = parseFloat(deliveryChargeElement.textContent);
+
+    // Cập nhật "Payable Amount" ban đầu
+    updatePayableAmount();
+
+    // Sự kiện cập nhật "Total"
+    totalElement.addEventListener("DOMSubtreeModified", function () {
+        updatePayableAmount();
+    });
+
+    // Sự kiện cập nhật "Delivery Charge"
+    deliveryChargeElement.addEventListener("DOMSubtreeModified", function () {
+        updatePayableAmount();
+    });
+
+    // Hàm cập nhật "Payable Amount"
+    function updatePayableAmount() {
+        const total = parseFloat(totalElement.textContent);
+        const deliveryCharge = parseFloat(deliveryChargeElement.textContent);
+        const payableAmount = total + deliveryCharge;
+        payableAmountElement.textContent = payableAmount.toFixed(2);
+    }
+});
+</script>
+<script src="./js/home-js/script-index.js"></script>
+<script src="./js/bootstrap.js"></script>
+
+</html>

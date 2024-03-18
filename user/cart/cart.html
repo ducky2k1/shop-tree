@@ -1,0 +1,116 @@
+<link rel="stylesheet" href="../../css/home-css/cart.css">
+<div class="profile-cart" style="margin-top: 138px;" >
+    <div class="profile-banner">
+        <h2 class="heading2 text-center">Cart Page</h2>
+    </div>
+    <!-- -----cart-section-start--------- -->
+    <div class="container">
+        <div class="square"></div>
+        <h4 class="heading3">Selected Item : 3</h4>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-8">
+                <div class="cart_table">
+
+                        <div class="product d-flex justify-content-between align-items-center p-3" ng-repeat="product in products">
+                            <div class="item1">
+                                <!-- Sử dụng ng-src cho nguồn hình ảnh động -->
+                                <div class="d-flex">
+                                    <img ng-src="{{ product.image }}" alt="" class="img-fluid">
+                                    <div style="margin-left: 20px;">
+                                        <h4 class="heading4" style="margin-bottom: 20px;">{{ product.name }}</h4>
+                                        <h3 class="heading3">$<span class="item-price">{{ product.price }}</span></h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Sử dụng ng-model để liên kết giá trị input -->
+                            <div class="item2">
+                                <div class="d-flex">
+                                    <div class="d-flex align-items-center quantity-wrapper">
+                                        <div class="d-flex quantity">
+                                            <!-- <button ng-click="updateQuantity($index, -1)">
+                                                <span class="quantity-down">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </span>
+                                            </button>
+                                            <input type="number" min="1" max="100" step="1" ng-model="product.quantity">
+                                            <button ng-click="updateQuantity($index, 1)">
+                                                <span class="quantity-up">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </span>
+                                            </button> -->
+                                            <button ng-click="updateQuantity($index, -1)">
+                                                <span class="quantity-down">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </span>
+                                            </button>
+                                            <input type="number" min="1" max="100" step="1" ng-model="product.quantity">
+                                            <button ng-click="updateQuantity($index, 1)">
+                                                <span class="quantity-up">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </span>
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item3 ">
+                                <h3 class="heading3 main-price d-flex align-items-center">$<span class="total-price">{{ product.totalPrice }}</span></h3>
+                            </div>
+                            <i class="fa-regular fa-rectangle-xmark" ng-click="removeProduct($index)"></i>
+                            
+                        </div>
+
+                </div>
+                <div class="more">
+
+                    Do you want to add more?
+                    <a href="./product.html">Click Here</a>
+
+                </div>
+            </div>
+            <div class="col-md-4 cart-info">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h4 class="heading4" style="color: #5d8834;">Total</h4>
+                    <h4 class="heading5" style="margin-right: 10px;"> <span class="total-price">{{ totalAmount | currency }}</span></h4>
+                </div>
+                <div class="d-flex align-items-center justify-content-between" style="margin-bottom: 10px;">
+                    <h4 class="heading4" style="color: #5d8834;">Delivery Charge</h4>
+                    <h4 class="heading5" style="margin-right: 10px;"> <span class="total-price">{{ deliveryCharge | currency }}</span></h4>
+                </div>
+                <div class="divider"></div>
+                <div class="d-flex align-items-center justify-content-between" style="margin-top: 20px;">
+                    <h4 class="heading4" style="color: #5d8834;">Payable Amount</h4>
+                    <h4 class="heading5" style="margin-right: 10px;"> <span class="total-price">{{ payableAmount | currency }}</span></h4>
+                </div>
+                <div class="preferred">
+                    Preferred Delivery Timings
+                </div>
+                <!-- delivery time -->
+                <div class="delivery-time">
+                    <div class="heading6">
+                        When would you like your delivery?
+                    </div>
+                    <div class="d-flex gap-3 flex-wrap justify-content-between" style="margin-top: 20px;">
+                        <div class="left d-flex justify-content-center align-items-center">
+                            <div class="date">
+                                <input type="date" data-date="25 February 2023" data-date-format="DD MMMM YYYY" value="2023-02-25">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end delivery time -->
+                <div class="confirmation d-flex justify-content-center align-items-center">
+                    <h5 class="heading6 text-center">    
+                        Are you sure you want to order?
+                    </h5>
+                    <a href="#!payment" class="text-decoration-none">
+                        <button class="button-1">Place Order</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------cart-section-end----------- -->
+</div>

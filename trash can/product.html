@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="https://kit.fontawesome.com/e522de5ba4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/home-css/css-index.css">
+    <link rel="stylesheet" href="./css/home-css/cart.css">
+    <link rel="stylesheet" href="./css/home-css/product.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_wrapper fixed-nav">
+            <div class="nav">
+                <div class="container-fluid" style="background-color: #5d8834;">
+                    <div class="nav-top container d-flex justify-content-between align-content-center">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <i class="mx-1 fa-solid fa-phone" style="color: #ffffff;"></i>
+                            <p class="mx-1 text-white" style="margin-bottom: 0;">Hotline: 0123456</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <i class="mx-1 fa-brands fa-facebook-f" style="color: white;"></i>
+                            <i class="mx-1 fa-brands fa-twitter" style="color: white;"></i>
+                            <i class="mx-1 fa-brands fa-instagram" style="color: white;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center w-100  navbar">
+                        <div class="logo">
+                            <a href="./index.html">
+                                <img src="./images/logo.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+
+                        <ul class="menu d-flex align-items-center justify-content-between">
+                            <li class=""><a href="./index.html">Home</a></li>
+                            <li class="dropdown-menus">
+                                <a href="">
+                                    Page
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <ul class="drop-menu">
+                                    <li class="d-flex justify-content-center align-content-center"><a href="./cart.html"
+                                            class="text-white">Page Cart</a></li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                            href="./detail-product.html" class="text-white">Detail Products Page</a>
+                                    </li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                            href="./product.html" class="text-white">Products Page</a></li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                        href="./payment.html" class="text-white">Payment Page</a>
+                                    </li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                        href="./order-tracking.html" class="text-white">Order Tracking</a>
+                                    </li>
+                                    <li class="d-flex justify-content-center align-content-center"><a
+                                        href="./profile.html" class="text-white">Profile</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class=""><a href="./product.html">Product</a></li>
+                            <li class=""><a href="./contact.html">Contact Us</a></li>
+                        </ul>
+
+
+                        <ul class="option d-flex align-items-center justify-content-between">
+                            <li class="d-flex">
+                                <input type="text">
+                                <div class="search btn btn-success">
+                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                                </div>
+
+                            </li>
+                            <li class="d-flex cart" style="position: relative;">
+                                <a href="./cart.html">
+                                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                                    <span class="qty badge bg-danger rounded-pill" id="qty">10</span>
+                                </a>
+
+                            </li>
+                            <li class="logins">
+                                <a href="./login.html" class="btn btn-success rounded-4 btn-sm">Login</a>
+                                <a href="./regist.html" class="btn btn-success rounded-4 btn-sm">Register</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="profile-cart" style="margin-top: 138px;">
+        <div class="profile-banner">
+            <h2 class="heading2 text-center" style="color: #5d8834;">Products Page</h2>
+        </div>
+    </div>
+    <!-- products list -->
+    <div class="product-list">
+        <div class="square"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3" style="margin-bottom: 30px;">
+                    <h3 class="heading3">Product Categories</h3>
+                    <h4 class="heading4 primary">All</h4>
+                    <h4 class="heading4">Medium</h4>
+                    <h4 class="heading4">Small</h4>
+                    <h4 class="heading4" style="margin-bottom: 40px;">Tiny</h4>
+                    <h4 class="heading4 price" style="padding-bottom: 10px;">Filter by price</h4>
+                    <div class="slider-wrapper">
+                        <div class="wrapper">
+                            <div class="slider">
+                                <div class="progress"></div>
+                            </div>
+                            <div class="range-input">
+                                <input type="range" class="form-range range-min custom-range" min="0" max="100"
+                                    value="0" step="1">
+                                <input type="range" class="form-range range-max custom-range" min="0" max="100"
+                                    value="0" step="1">
+                            </div>
+
+                            <div class="price-input">
+                                Price
+
+                                <div class="field heading5" style="margin-left: 5px;">
+                                    <input type="number" class="form-control input-min" value="0"
+                                        fdprocessedid="d951kd">
+                                    $
+                                </div>
+                                <div class="separator">-</div>
+                                <div class="field heading5">
+                                    <input type="number" class="form-control input-max" value="0"
+                                        fdprocessedid="odkzno">
+                                    $
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button-1">
+                        Filter
+                    </button>
+
+                </div>
+                <div class="col-lg-9">
+                    <div class="sort" style="margin-bottom: 40px;">
+                        <div class="d-flex flex-column flex-md-row justify-content-end">
+                            <div class="d-flex align-items-center ">
+                                <h4 class="heading4" style="padding-right: 30px;">Sort by</h4>
+                            </div>
+                            <div class="option_wrapper  sort-by">
+                                <select name="sort" id="sort" fdprocessedid="xlifus">
+                                    <option value="">Default</option>
+                                    <option value="Price Low to Height">
+                                        Price Low to Height
+                                    </option>
+                                    <option value="Price Height to Low ">
+                                        Price Height to Low
+                                    </option>
+                                    <option value="Small ">Small</option>
+                                    <option value="Big ">Big</option>
+                                    <option value="Recent">Recent</option>
+                                    <option value="Top Selling">Top Selling</option>
+                                </select>
+                                <label class="down_arrow">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <h4 class="heading4" style="padding-right: 30px;">Show</h4>
+
+                                <div class="option_wrapper show">
+                                    <select name="sort" id="sort" fdprocessedid="qr19ys">
+                                        <option value="">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                    </select>
+                                    <label class="down_arrow">
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="img-wrapper mb-20">
+                                    <a href="./detail-product.html">
+                                        <img src="./images/products/2.png" alt="" class="img-fluid" style="width: 100%; height: 100%;">
+                                    </a>
+                                </div>
+                                <a href="" class="text-decoration-none">
+                                    <h5 class="heading5">Aliquam Furniture</h5>
+                                </a>
+                                <div class="paragraph text-center">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                                <h3 class="heading3 text-center">$20</h3>
+                                <div class="d-flex justify-content-center align-content-center btn-cart">
+                                    <a href="./payment.html" class="d-flex justify-content-center align-items-center text-decoration-none me-2"><button class="btn btn-success rounded-pill" fdprocessedid="ie83gq">Buy now</button></a>
+                                    <a href="./cart.html" class="d-flex justify-content-center align-items-center text-decoration-none"><button class="btn btn-success rounded-pill" fdprocessedid="n7mt2l">Add to cart</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="img-wrapper mb-20">
+                                    <a href="./detail-product.html">
+                                        <img src="./images/products/3.png" alt="" class="img-fluid">
+                                    </a>
+                                </div>
+                                <a href="" class="text-decoration-none">
+                                    <h5 class="heading5">Aliquam Furniture</h5>
+                                </a>
+                                <div class="paragraph text-center">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                                <h3 class="heading3 text-center">$20</h3>
+                                <div class="d-flex justify-content-center align-content-center btn-cart">
+                                    <a href="./payment.html" class="d-flex justify-content-center align-items-center text-decoration-none me-2"><button class="btn btn-success rounded-pill" fdprocessedid="ie83gq">Buy now</button></a>
+                                    <a href="./cart.html" class="d-flex justify-content-center align-items-center text-decoration-none"><button class="btn btn-success rounded-pill" fdprocessedid="n7mt2l">Add to cart</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="img-wrapper mb-20">
+                                    <a href="./detail-product.html">
+                                        <img src="./images/products/4.png" alt="" class="img-fluid">
+                                    </a>
+                                </div>
+                                <a href="./detail-product.html" class="text-decoration-none">
+                                    <h5 class="heading5">Aliquam Furniture</h5>
+                                </a>
+                                <div class="paragraph text-center">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                                <h3 class="heading3 text-center">$20</h3>
+                                <div class="d-flex justify-content-center align-content-center btn-cart">
+                                    <a href="./payment.html" class="d-flex justify-content-center align-items-center text-decoration-none me-2"><button class="btn btn-success rounded-pill" fdprocessedid="ie83gq">Buy now</button></a>
+                                    <a href="./cart.html" class="d-flex justify-content-center align-items-center text-decoration-none"><button class="btn btn-success rounded-pill" fdprocessedid="n7mt2l">Add to cart</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="img-wrapper mb-20">
+                                    <a href="./detail-product.html">
+                                        <img src="./images/products/5.png" alt="" class="img-fluid">
+                                    </a>
+                                </div>
+                                <a href="./detail-product.html" class="text-decoration-none">
+                                    <h5 class="heading5">Aliquam Furniture</h5>
+                                </a>
+                                <div class="paragraph text-center">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                                <h3 class="heading3 text-center">$20</h3>
+                                <div class="d-flex justify-content-center align-content-center btn-cart">
+                                    <a href="./payment.html" class="d-flex justify-content-center align-items-center text-decoration-none me-2"><button class="btn btn-success rounded-pill" fdprocessedid="ie83gq">Buy now</button></a>
+                                    <a href="./cart.html" class="d-flex justify-content-center align-items-center text-decoration-none"><button class="btn btn-success rounded-pill" fdprocessedid="n7mt2l">Add to cart</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="img-wrapper mb-20">
+                                    <a href="./detail-product.html">
+                                        <img src="./images/products/6.png" alt="" class="img-fluid">
+                                    </a>
+                                </div>
+                                <a href="./detail-product.html" class="text-decoration-none">
+                                    <h5 class="heading5">Aliquam Furniture</h5>
+                                </a>
+                                <div class="paragraph text-center">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                                <h3 class="heading3 text-center">$20</h3>
+                                <div class="d-flex justify-content-center align-content-center btn-cart">
+                                    <a href="./payment.html" class="d-flex justify-content-center align-items-center text-decoration-none me-2"><button class="btn btn-success rounded-pill" fdprocessedid="ie83gq">Buy now</button></a>
+                                    <a href="./cart.html" class="d-flex justify-content-center align-items-center text-decoration-none"><button class="btn btn-success rounded-pill" fdprocessedid="n7mt2l">Add to cart</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="product-card">
+                                <div class="img-wrapper mb-20">
+                                    <a href="./detail-product.html">
+                                        <img src="./images/products/7.png" alt="" class="img-fluid">
+                                    </a>
+                                </div>
+                                <a href="./detail-product.html" class="text-decoration-none">
+                                    <h5 class="heading5">Aliquam Furniture</h5>
+                                </a>
+                                <div class="paragraph text-center">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                                <h3 class="heading3 text-center">$20</h3>
+                                <div class="d-flex justify-content-center align-content-center btn-cart">
+                                    <a href="./payment.html" class="d-flex justify-content-center align-items-center text-decoration-none me-2"><button class="btn btn-success rounded-pill" fdprocessedid="ie83gq">Buy now</button></a>
+                                    <a href="./cart.html" class="d-flex justify-content-center align-items-center text-decoration-none"><button class="btn btn-success rounded-pill" fdprocessedid="n7mt2l">Add to cart</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <ul class="pagination d-flex align-items-center justify-content-center" style="margin-top: 60px;">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="square">
+        </div>
+    </div>
+    <!-- end products list -->
+
+
+    <!-- -------------start-footer-------------- -->
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 mt-5">
+                    <div class="logo">
+                        <img src="./images/footer/logo.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="paragrap">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
+                        nulla eu dui suscipit ultricies. Mauris vestibulum volutpat nisl
+                        vel cursus. Cras finibus nec mauris tincidunt condimentum.
+                    </div>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/duc.trinh.54584"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-2 mt-5">
+                    <h3 class="heading3">
+                        Link
+                    </h3>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-3 mt-5">
+                    <h3 class="heading3">Get In Touch</h3>
+                    <ul class="address">
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                0123456
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-envelope"></i>
+                                example@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                                Trinh Van Bo, Ha Noi City
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3 mt-5">
+                    <h3 class="heading3">Other Links</h3>
+                    <ul>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid coppyright mt-5">
+            <div class="container">
+                <div class="d-flex py-3 justify-content-between align-items-center">
+                    <div class="paragrap">
+                        Copyright & Design by Trinh Viet Duc
+                    </div>
+                    <div class="d-flex">
+                        <div class="card-warpper">
+                            <img src="./images/footer/1.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-warpper">
+                            <img src="./images/footer/2.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-warpper">
+                            <img src="./images/footer/3.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="card-warpper">
+                            <img src="./images/footer/4.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+<script src="./js/home-js/script-cart.js"></script>
+<script src="./js/home-js/script-index.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="./js/home-js/product.js"></script>
+
+</html>

@@ -1,0 +1,120 @@
+#get-in {
+    background-image: url(../../images/contact/contact-back.png);
+    background-repeat: no-repeat;
+}
+#get-in .get-in-body .get-in-main {
+    background-color: #ffffff;
+    box-shadow: 0px 10px 20px 20px rgba(0, 0, 0, 0.03);
+    justify-content: space-between;
+    padding: 120px 90px;
+    background-image: url(../../images/contact/get-in-back.png);
+    background-repeat: no-repeat;
+    background-position: 61% 50%;
+}
+#get-in .get-in-body .get-in-main .get-in-form-body p {
+    margin-bottom: 40px;
+}
+.heading2 {
+    font-family: "Playfair Display";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 53px;
+}
+#get-in .get-in-body .get-in-main .get-in-form-body .get-in-form {
+    max-width: 485px;
+}
+#get-in .get-in-body .get-in-main .get-in-form-body .get-in-form .get-in-input-1-2 {
+    display: flex;
+}
+.heading6 {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+#get-in .heading1,#get-in .heading2,#get-in .heading3,#get-in .heading4,#get-in .heading5,#get-in .heading6 {
+    font-style: normal;
+    color: #000000;
+}
+#get-in .get-in-body .get-in-main .get-in-form-body .get-in-form .get-in-input-1-2 .get-in-input-1 input {
+    height: 45px;
+}
+
+#get-in .get-in-body .get-in-main .get-in-form-body .get-in-form input, #get-in .get-in-body .get-in-main .get-in-form-body .get-in-form textarea {
+    background-color: #eff3eb;
+    padding-left: 23px;
+    font-size: 18px;
+    color: #a3a8a8;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+#get-in .get-in-body .get-in-main .get-in-form-body .get-in-form .get-in-input-1-2 .get-in-input-2 {
+    margin-left: 25px;
+}
+#get-in .get-in-body .get-in-main .get-in-form-body .get-in-form .get-in-input-1-2 .get-in-input-2 input {
+    height: 45px;
+}
+#get-in .get-in-body .get-in-main .get-in-form-body .get-in-form .get-in-input-3 {
+    margin-top: 20px;
+}
+#get-in .get-in-body .get-in-main .get-in-form-body .get-in-form .get-in-input-3 input {
+    height: 45px;
+}
+#get-in .get-in-body .get-in-main .get-in-form-body .get-in-form .get-in-input-4 {
+    margin-top: 20px;
+}
+#get-in .get-in-body .get-in-main .get-in-form-body .get-in-form textarea {
+    height: 100px;
+    padding-top: 10px;
+}
+.mt-40 {
+    margin-top: 40px;
+}
+#get-in .get-in-body .get-in-main .get-in-contact-body .heading2 {
+    margin-bottom: 40px;
+}
+#get-in .get-in-body .get-in-main .get-in-contact-body .get-in-contact-items {
+    display: flex;
+    align-items: center;
+}
+#get-in .get-in-body .get-in-main .get-in-contact-body .get-in-contact-items img {
+    margin-right: 25px;
+}
+#get-in .get-in-body .get-in-main .get-in-contact-body .get-in-contact-items .get-in-text {
+    width: 100%;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.heading4 {
+    font-family: "Playfair Display";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+}
+.mb-1 {
+    margin-bottom: 0.25rem!important;
+}
+.heading5 {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+.mt-25 {
+    margin-top: 25px;
+}
+#map {
+    margin-top: 130px;
+    width: 100%;
+    max-height: 600px;
+    height: 100%;
+}
+#map .map-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
